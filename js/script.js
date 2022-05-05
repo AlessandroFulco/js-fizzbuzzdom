@@ -3,13 +3,10 @@
 
 
 // creare un ciclo che stampi i numeri da 1 a 100
-let type;
 
 let myList = document.querySelector('ul.list');
 for (let i = 1; i <= 100; i++) {
     console.log(i);
-    // creazione listItem
-    let myListItem;
     // determinare se il numero sia divisibile per 3(fizz), 5(buzz) oppure entrambi(fizzBuzz)
     if (i % 3 === 0 && i % 5 === 0) {
         type = "FizzBuzz";
@@ -31,7 +28,5 @@ for (let i = 1; i <= 100; i++) {
     
 }
 
-// inserire gli elementi nella pagina html
 
-// applicare uno stile differente a seconda del valore dell'indice per i multipli di 3, 5 o entrambi
 
