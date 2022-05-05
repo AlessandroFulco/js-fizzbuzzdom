@@ -6,7 +6,7 @@
 let type;
 
 let myList = document.querySelector('ul.list');
-for (let i = 1; i <= 30; i++) {
+for (let i = 1; i <= 100; i++) {
     console.log(i);
     const myListItem = document.createElement('li');
     // determinare se il numero sia divisibile per 3(fizz), 5(buzz) oppure entrambi(fizzBuzz)
@@ -18,6 +18,9 @@ for (let i = 1; i <= 30; i++) {
         myListItem.append(type);
     } else if (i % 3 === 0) {
         type = "Fizz";
+        myListItem.append(type);
+    } else {
+        type = i;
         myListItem.append(type);
     }
     myList.append(myListItem);
