@@ -9,22 +9,26 @@ let myList = document.querySelector('ul.list');
 for (let i = 1; i <= 100; i++) {
     console.log(i);
     // creazione listItem
-    const myListItem = document.createElement('li');
+    let myListItem;
     // determinare se il numero sia divisibile per 3(fizz), 5(buzz) oppure entrambi(fizzBuzz)
     if (i % 3 === 0 && i % 5 === 0) {
         type = "FizzBuzz";
-        myListItem.append(type);
+        const myListItem = `<li class="fizzBuzz">${type}</li>`;
+        myList.innerHTML += myListItem;
     } else if (i % 5 === 0) {
         type = "Buzz";
-        myListItem.append(type);
+        const myListItem = `<li class="buzz">${type}</li>`;
+        myList.innerHTML += myListItem;
     } else if (i % 3 === 0) {
         type = "Fizz";
-        myListItem.append(type);
+        const myListItem = `<li class="fizz">${type}</li>`;
+        myList.innerHTML += myListItem;
     } else {
         type = i;
-        myListItem.append(type);
+        const myListItem = `<li>${type}</li>`;
+        myList.innerHTML += myListItem;
     }
-    myList.append(myListItem);
+    
 }
 
 // inserire gli elementi nella pagina html
